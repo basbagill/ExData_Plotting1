@@ -22,7 +22,7 @@ power_data.sub$Date <- as.Date(power_data.sub$Date)
 weekday <- wday(power_data.sub$Date, label=TRUE)
 
 ## Plot as png file
-png(filename="plot2.png")
+png(filename="plot2.png", width=480, height=480)
 plot(power_data.sub$Global_active_power, type = "l", xaxt = "n", xlab = " ", 
       ylab = "Global Active Power (kilowatts)")
 
