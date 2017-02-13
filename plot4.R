@@ -27,7 +27,7 @@ power_data.sub$Sub_metering_3 <- as.numeric(levels(power_data.sub$Sub_metering_3
 ## Convert Global reactive power column from factor to numeric
 power_data.sub$Global_reactive_power <- as.numeric(levels(power_data.sub$Global_reactive_power))[as.integer(power_data.sub$Global_reactive_power)]
 
-png(filename="plot4.png")
+png(filename="plot4.png", width=480, height=480)
 
 ## Set up space for four graphs
 par(mfrow = c(2,2))
