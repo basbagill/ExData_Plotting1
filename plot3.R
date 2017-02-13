@@ -26,7 +26,7 @@ weekday <- wday(power_data.sub$Date, label=TRUE)
 ## Plot three lines
 png(filename="plot3.png")	
 par(mar=c(5.1,6.1,4.1,2.1))
-plot3.png <- plot(power_data.sub$Sub_metering_1, type = "l", xaxt = "n", xlab = " ", ylab = "Energy sub metering", col="black")
+plot(power_data.sub$Sub_metering_1, type = "l", xaxt = "n", xlab = " ", ylab = "Energy sub metering", col="black")
 lines(power_data.sub$Sub_metering_2, col="red")
 lines(power_data.sub$Sub_metering_3, col="blue")
 
@@ -37,5 +37,4 @@ legend("topright", c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), lty 
 axis(1, at = c(1, nrow(power_data.sub)/2, nrow(power_data.sub)), 
 labels=c(weekday[1], weekday[nrow(power_data.sub)/2+1, weekday[nrow(power_data.sub)+1]))
 
-plot(plot3.png)
 dev.off()

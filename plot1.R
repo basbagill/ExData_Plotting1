@@ -18,7 +18,6 @@ power_data.sub$Global_active_power <- as.numeric(levels(power_data.sub$Global_ac
 
 ## Plot as png file
 png(filename="plot1.png")
-plot1.png <- hist(power_data.sub$Global_active_power, col = "red", 
+hist(power_data.sub$Global_active_power, col = "red", 
      xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
-plot(plot1.png)
 dev.off()

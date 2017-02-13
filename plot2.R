@@ -23,12 +23,11 @@ weekday <- wday(power_data.sub$Date, label=TRUE)
 
 ## Plot as png file
 png(filename="plot2.png")
-plot2.png <- plot(power_data.sub$Global_active_power, type = "l", xaxt = "n", xlab = " ", 
+plot(power_data.sub$Global_active_power, type = "l", xaxt = "n", xlab = " ", 
       ylab = "Global Active Power (kilowatts)")
 
 ## Plot x axis labels
 axis(1, at = c(1, nrow(power_data.sub)/2, nrow(power_data.sub)), 
      labels=c(weekday[1], weekday[nrow(power_data.sub)/2+1, weekday[nrow(power_data.sub)+1]))
 
-plot(plot2.png)
 dev.off()
