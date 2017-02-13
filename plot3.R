@@ -24,7 +24,7 @@ power_data.sub$Date <- as.Date(power_data.sub$Date)
 weekday <- wday(power_data.sub$Date, label=TRUE)
 
 ## Plot three lines
-png(filename="plot3.png")	
+png(filename="plot3.png", width=480, height=480)	
 par(mar=c(5.1,6.1,4.1,2.1))
 plot(power_data.sub$Sub_metering_1, type = "l", xaxt = "n", xlab = " ", ylab = "Energy sub metering", col="black")
 lines(power_data.sub$Sub_metering_2, col="red")
